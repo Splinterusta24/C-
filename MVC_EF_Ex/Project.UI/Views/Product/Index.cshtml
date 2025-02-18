@@ -1,0 +1,77 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @model List<Project.UI.Models.ControllerModels>
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ürünler</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div>
+        <h2 class="modal-header text-center">Ürünler</h2>
+        <table class="table table-responsive table-bordered">
+            <tr class="row">
+                <th>Id</th>
+                <th>Adı</th>
+                <th>Kategorisi</th>
+                <th>Fiyatı</th>
+                <th>Miktarı</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                @*@Html.DropDownListFor(@item.CategoryId,(List<SelectListItem>)ViewBag.a, new { @class = "dropdown" }) burası productda selectlistitemın kullanılması içindir *@
+                <tr class="row">
+                    <td>@item.Id</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.CategoryName</td>
+                    <td>@item.Price</td>
+                    <td>@item.Quantity</td>
+                    <td><a class="btn-success" href="/Product/Update">Güncelle</a></td>
+                    <td>
+                        <form method="post">
+                            <input id="productId" name="productId" hidden="true" value="@item.Id" />
+                            <button type="submit" id="btnSend" name="btnSend" class="btn-danger" formaction="/Product/Delete">
+                                SİL
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </table>
+        <form method="post">
+            <table class="table table-responsive table-bordered">
+
+                <tr>
+                    <td><input type="number" id="productId" name="productId" placeholder="Id" /></td>
+                    <td><input type="text" id="productName" name="productName" placeholder="Ürün Adı" /></td>
+                    <td><input type="number" id="price" name="price" placeholder="Fiyat" /></td>
+                    <td><input type="number" id="quantity" name="quantity" placeholder="Adet" /></td>
+                    <td>
+                        <select id="categoryId" name="categoryId">
+                            @foreach (var item in Model)
+                            {
+                                <option value="@item.CategoryId">@item.CategoryName</option>
+                            }
+                        </select>
+                    </td>
+                    <td>
+                        <button type="submit" id="btnUpdate" name="btnUpdate" class="btn-success" formaction="/Product/Update">
+                            Güncelle
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

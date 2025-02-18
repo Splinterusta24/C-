@@ -1,0 +1,38 @@
+﻿@using Project.Entites.Concrete
+@model Category
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddCategory</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("AddCategory", "Category", FormMethod.Post, new { @class = "form-group" }))
+        {
+            <div class="col-md-12">
+                @Html.Label("Name")
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Name)
+            </div>
+            <div class="col-md-12">
+                @Html.Label("Description")
+                @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Description,"",new {@style="color:red;"})
+            </div>
+            @*@Html.Label("Kategori")
+                @Html.DropDownListFor(x => x.Id, (List<SelectListItem>)ViewBag.a,new {@class= "form-control"}) burası product eklemek için  *@
+            <button type="submit">Ekle</button>
+        }
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

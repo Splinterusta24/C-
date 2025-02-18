@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @model List<Project.Entites.Concrete.Category>
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ürün Ekle</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div>
+        <form class="form-group">
+            <label for="name" class="label-primary">Ürün Adı</label>
+            <input type="text" class="form-control text-left" id="name" name="name" placeholder="Ürün Adı" />
+            <label for="category" class="label-default">Kategori</label>
+            <select  class="form-control" id="categoryId" name="categoryId">
+                @foreach (var item in Model)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            </select>
+            <label for="price" class="label-default">Fiyat</label>
+            <input type="number" class="form-control text-left" id="price" name="price" placeholder="Fiyat" />
+            <label for="quantity" class="label-default">Adet</label>
+            <input type="number" class="form-control text-left" id="quantity" name="quantity" placeholder="Adet" />
+            <button id="btnSend" onclick="btnclick()" name="btnSend">Ekle</button>
+        </form>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script type="text/javascript">
+        var name = $("#name");
+        var price = $("#price");
+        var quantity = $("#quantity");
+        var btn = document.getElementById("btnSend");
+        function btnclick() {
+            var name = $("#name").val();
+            var price = $("#price").val();
+            var quantity = $("#quantity").val();
+
+            if (name && price && quantity) {
+                $("form").attr("action", "/Product/Add");
+                $("form").attr("method", "post");
+                $("form").submit();
+            } else {
+                alert("Boş olamaz!");
+                window.location.reload();
+            }
+        }
+    </script>
+</body>
+</html>

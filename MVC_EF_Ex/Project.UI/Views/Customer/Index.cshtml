@@ -1,0 +1,38 @@
+﻿@using Project.Entites.Concrete
+@model List<Customer>
+@{
+    Layout = "~/Views/Shared/_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div>
+        <h1></h1>
+        @foreach (var item in Model)
+        {
+            <table class="table table-striped">
+                <tr class="row">
+                    <th>Id</th>
+                    <th>İsim</th>
+                    <th>Şifre</th>
+                </tr>
+                <tr class="row">
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Password</td>
+                </tr>
+            </table>
+        }
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

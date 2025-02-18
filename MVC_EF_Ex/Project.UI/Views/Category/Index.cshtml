@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @model List<Project.Entites.Concrete.Category>
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div>
+        <h1 class="h1 text-left">Kategoriler</h1>
+        <table class="table table-bordered">
+            <tr>
+                <th>Id</th>
+                <th>Kategori</th>
+                <th>Açıklama</th>
+                <th>Güncelle</th>
+                <th>SİL</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>
+                        <a href="/Category/UpdateCategory/@item.Id" class="btn-success"> Güncelle
+                        </a>
+                    </td>
+                    <td>
+                        <form method="post">
+                            <input id="categoryId" name="categoryId" hidden="true" value="@item.Id" />
+                            <button type="submit" formaction="/Category/Delete" class="btn-danger">SİL</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

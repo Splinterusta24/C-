@@ -1,0 +1,11 @@
+C:\Users\nedim\Desktop\ADOWinform\bin\Debug\ADOWinform.exe.config
+C:\Users\nedim\Desktop\ADOWinform\bin\Debug\ADOWinform.exe
+C:\Users\nedim\Desktop\ADOWinform\bin\Debug\ADOWinform.pdb
+C:\Users\nedim\Desktop\ADOWinform\obj\Debug\ADOWinform.csproj.AssemblyReference.cache
+C:\Users\nedim\Desktop\ADOWinform\obj\Debug\ADOWinform.csproj.SuggestedBindingRedirects.cache
+C:\Users\nedim\Desktop\ADOWinform\obj\Debug\ADOWinform.Form1.resources
+C:\Users\nedim\Desktop\ADOWinform\obj\Debug\ADOWinform.Properties.Resources.resources
+C:\Users\nedim\Desktop\ADOWinform\obj\Debug\ADOWinform.csproj.GenerateResource.cache
+C:\Users\nedim\Desktop\ADOWinform\obj\Debug\ADOWinform.csproj.CoreCompileInputs.cache
+C:\Users\nedim\Desktop\ADOWinform\obj\Debug\ADOWinform.exe
+C:\Users\nedim\Desktop\ADOWinform\obj\Debug\ADOWinform.pdb

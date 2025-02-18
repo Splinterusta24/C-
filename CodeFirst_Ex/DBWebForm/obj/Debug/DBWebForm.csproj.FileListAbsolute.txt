@@ -1,0 +1,15 @@
+C:\Users\nedim\Desktop\DBWebForm\bin\Debug\DBWebForm.exe.config
+C:\Users\nedim\Desktop\DBWebForm\bin\Debug\DBWebForm.exe
+C:\Users\nedim\Desktop\DBWebForm\bin\Debug\DBWebForm.pdb
+C:\Users\nedim\Desktop\DBWebForm\bin\Debug\EntityFramework.dll
+C:\Users\nedim\Desktop\DBWebForm\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nedim\Desktop\DBWebForm\bin\Debug\EntityFramework.xml
+C:\Users\nedim\Desktop\DBWebForm\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nedim\Desktop\DBWebForm\obj\Debug\DBWebForm.csproj.AssemblyReference.cache
+C:\Users\nedim\Desktop\DBWebForm\obj\Debug\DBWebForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\nedim\Desktop\DBWebForm\obj\Debug\DBWebForm.Properties.Resources.resources
+C:\Users\nedim\Desktop\DBWebForm\obj\Debug\DBWebForm.csproj.GenerateResource.cache
+C:\Users\nedim\Desktop\DBWebForm\obj\Debug\DBWebForm.csproj.CoreCompileInputs.cache
+C:\Users\nedim\Desktop\DBWebForm\obj\Debug\DBWebForm.csproj.CopyComplete
+C:\Users\nedim\Desktop\DBWebForm\obj\Debug\DBWebForm.exe
+C:\Users\nedim\Desktop\DBWebForm\obj\Debug\DBWebForm.pdb

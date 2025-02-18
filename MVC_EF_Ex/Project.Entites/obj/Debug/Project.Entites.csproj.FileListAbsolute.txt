@@ -1,0 +1,6 @@
+C:\Users\nedim\Desktop\ProjectSoftito\Project.Entites\bin\Debug\Project.Entites.dll
+C:\Users\nedim\Desktop\ProjectSoftito\Project.Entites\bin\Debug\Project.Entites.pdb
+C:\Users\nedim\Desktop\ProjectSoftito\Project.Entites\obj\Debug\Project.Entites.csproj.AssemblyReference.cache
+C:\Users\nedim\Desktop\ProjectSoftito\Project.Entites\obj\Debug\Project.Entites.csproj.CoreCompileInputs.cache
+C:\Users\nedim\Desktop\ProjectSoftito\Project.Entites\obj\Debug\Project.Entites.dll
+C:\Users\nedim\Desktop\ProjectSoftito\Project.Entites\obj\Debug\Project.Entites.pdb

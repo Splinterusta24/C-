@@ -1,0 +1,31 @@
+﻿@using Project.Entites.Concrete
+@model Category
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UpdateCategory</title>
+</head>
+<body>
+    <div class="col-md-12">
+        <div class="form-group-lg">
+            @using (Html.BeginForm("Update", "Category", FormMethod.Post))
+            {
+                @Html.TextBoxFor(x => x.Id, new { @hidden = "true" })
+                @Html.Label("Adı")
+                @Html.TextAreaFor(x => x.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Name)
+                @Html.Label("Açıklaması")
+                @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Description)
+                <button type="submit" class="btn-success">Güncelle</button>
+            }
+        </div>
+    </div>
+</body>
+</html>
